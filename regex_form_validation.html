@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <link href="regex_form_validation.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="inner-main">
+            <div class="input-item">
+                <h2>User Validation Form</h2>
+                <hr />
+            </div>
+            <div class="input-item">
+                <span>Name</span>
+                <input type="text" placeholder="name..." id="name" value="" onchange="nameValidate()" />
+            </div>
+
+            <div class="input-item">
+                <span>Email</span>
+                <input type="text" placeholder="email..." id="email" value="" onchange="emailValidate()" />
+            </div>
+
+            <div class="input-item">
+                <span>Password</span>
+                <input type="text" placeholder="password..." id="password" value="" onchange="passwordValidate()" />
+            </div>
+
+            <div class="input-item">
+                <span>DOB</span>
+                <input type="text" placeholder="DOB..." id="dob" value="" onchange="dobValidate()" />
+            </div>
+
+            <div class="input-item">
+                <span>CNIC</span>
+                <input type="text" placeholder="CNIC..." maxlength='15' id="cnic" value="" onchange="cnicValidate()" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function nameValidate() {
+            let val = document.getElementById('name').value;
+            let n = val.replace(/\s/g, '');
+            if (n) {
+                document.getElementById('name').value = n;
+                console.log(n);
+            }
+        }
+
+        function emailValidate() {
+            let val = document.getElementById('email').value;
+            pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+            let validated = val.match(pattern);
+            document.getElementById('email').value = val.match(pattern);
+        }
+
+        function passwordValidate() {
+            let val = document.getElementById('password').value;
+            pattern = /^(?=[^\d_].*?\d)\w(\w|[!@#$%]){7,20}/;
+            let validated = val.match(pattern);
+            document.getElementById('password').value = val.match(pattern);
+        }
+
+        function dobValidate() {
+            let val = document.getElementById('dob').value;
+            pattern = /^(?:(?:31(\-)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\-)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\-)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\-)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/;
+
+            let validated = val.match(pattern);
+            document.getElementById('dob').value = val.match(pattern);
+        }
+
+        function cnicValidate() {
+            let val = document.getElementById('cnic').value;
+            pattern = /^[0-9+]{5}-[0-9+]{7}-[0-9]{1}$/;
+            let validated = val.match(pattern);
+            document.getElementById('cnic').value = val.match(pattern);
+        }
+
+    </script>
+</body>
+
+</html>
