@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="month" id="month" />
+    <button onclick="monthcompare(document.getElementById('month').value)">SEARCH MONTH</button>
+    <script>
+        const monthcompare = (month) => {
+            const monthArr = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'july', 'aug', 'sep', 'oct', 'nov', 'dec'];
+            if (monthArr.includes(month)) {
+                console.log(" FOUND");
+            }
+            else {
+                console.log("MONTH NOT FOUND")
+            }
+        }
+    </script>
+</body>
+
+</html>
