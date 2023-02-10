@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>JS DOM paragraph style</title>
+</head>
+
+<body>
+    <p id='text'>JavaScript Exercises - w3resource</p>
+    <div>
+        <button id="style" type="button" onclick="change_style()">submit</button>
+    </div>
+
+    <script>
+        const change_style = () => {
+            let element = document.getElementById('text');
+            if (element) {
+                element.style.fontStyle = "italic";
+                element.style.fontSize = "25px";
+                element.style.color = 'green';
+            }
+            else {
+                alert("Node does not exist")
+            }
+        }
+    </script>
+</body>
