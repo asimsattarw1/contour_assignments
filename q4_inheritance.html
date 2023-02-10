@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <input type="number" placeholder="enter first value" id="v1" value="" />
+    <input type="number" placeholder="enter Second value" id="v2" value="" />
+    <input type="text" placeholder="Enter operator" id="op" value="" />
+    <button type="button" id="calculate" onclick="calculate()">Calculate</button>
+    <h3 id="output" output></h3>
+
+    <script>
+        function calculate() {
+            class Calculator {
+
+                constructor() {
+                    this.v1 = parseInt(document.getElementById('v1').value);
+                    this.v2 = parseInt(document.getElementById('v2').value);
+                    this.op = document.getElementById('op').value;
+                    this.result();
+                }
+
+                result() {
+                    if (this.v1 && this.v2) {
+                        switch (this.op) {
+                            case "+":
+                                return document.getElementById('output').innerHTML = `Result is: ${this.v1 + this.v2}`;
+                                break;
+
+                            case "-":
+                                return document.getElementById('output').innerHTML = `Result is: ${this.v1 - this.v2}`;
+                                break;
+
+                            case "*":
+                                return document.getElementById('output').innerHTML = `Result is: ${this.v1 * this.v2}`;
+                                break;
+
+                            case "/":
+                                return document.getElementById('output').innerHTML = `Result is: ${this.v1 / this.v2}`;
+                                break;
+
+                            default:
+                                alert("wrong input")
+                                break;
+                        }
+                    }
+                    else {
+                        alert("Provide input values correctly")
+                    }
+                }
+            }
+
+            let obj = new Calculator();
+            console.log(obj);
+        }
+    </script>
+</body>
+
+</html>
