@@ -1,0 +1,27 @@
+.img-col img{
+ height: 400px;
+ width: 100%;
+}
+
+.a{
+    height: 100px;
+    border-radius: unset;
+}
+@media screen and (min-width: 1603px){
+    .a{
+        height: 130px;
+    }
+}
+.b{
+    height: 400px;
+}
+@media screen and (max-width: 1164px){
+    .b{
+        height: 430px;
+    } 
+}
+@media screen and (max-width: 908px) {
+    .b{
+        height: 460px;
+    }
+}

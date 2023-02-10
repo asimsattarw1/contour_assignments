@@ -1,0 +1,61 @@
+:root {
+    --gray: #cccccc;
+    --white: #ffffff;
+}
+
+* {
+    background-color: var(--gray);
+}
+
+table {
+    border: 1px solid rgb(161, 156, 156) !important;
+}
+
+input {
+    border: none !important;
+    background-color: var(--gray) !important;
+}
+
+input:focus {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.list-group {
+    --bs-list-group-bg: var(--gray);
+}
+
+.list-group-item2 {
+    border: 1px solid rgb(184, 176, 176) !important;
+}
+
+.sports-td{
+    margin-top: 56px;
+}
+
+.myimg{
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+}
+
+.name{
+    color: red;
+}
+
+.fname{
+    color: blue;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.main img{
+    height: 450px;
+    width: 450px;
+}

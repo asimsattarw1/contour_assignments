@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" placeholder="Enter Number" id="unumber" />
+    <button type="button" onclick="check()">Check</button>
+
+    <script>
+        const check = () => {
+            let random = parseInt(Math.floor(Math.random() * 10) + 1);
+            let unumber = parseInt(document.getElementById("unumber").value);
+            if (random == unumber) {
+                alert(" you done well")
+            }
+            else {
+                alert("You missed")
+            }
+        }
+    </script>
+</body>
+
+</html>

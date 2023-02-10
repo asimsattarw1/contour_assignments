@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#sec1 {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(pics/firstPage.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+}
+
+nav {
+    height: 80px;
+    display: flex;
+    color: white;
+    position: relative;
+}
+
+nav h2 {
+    padding: 30px;
+    padding-left: 2em;
+
+}
+
+.right {
+    width: 30%;
+    position: absolute;
+    right: 10px;
+    padding: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.center {
+    text-align: center;
+    color: white;
+    position: absolute;
+    width: 40%;
+    top: 30%;
+    left: 30%;
+    right: 30%;
+}
+
+.center h2 {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 2px 2px yellow;
+}
+
+.center h1 {
+    padding: 10px;
+    font-weight: 900;
+    font-size: 40px;
+    text-shadow: 4px 4px green;
+}
+
+#green {
+    background-color: green;
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+    border: unset;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#sec3 {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(pics/logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+}
+
+.image {
+    width: 500px;
+    height: 400px;
+}
+
+#x {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(pics/people1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+#y {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(pics/people2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+#c {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(pics/people3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+#d {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(pics/girls.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+#e {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(pics/chef2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+
+#box1 {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(pics/karhai.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+}
+
+#box2 {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(pics/shwarma.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+}
+
+#box3 {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(pics/zinger.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+}
+
+#box4 {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(pics/pizza.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+}
+
+#box5 {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(pics/tikka.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+}
+
+#box6 {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(pics/icecream.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+}
+
+#box7 {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(pics/colddrink.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+}
+
+#box8 {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(pics/biryani.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+}
+
+.bar {
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    bottom: 0;
+    width: -webkit-fill-available;
+    left: 0;
+    padding-left: 20px;
+}
+
+.img-div {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 300px !important;
+    width: auto;
+}
