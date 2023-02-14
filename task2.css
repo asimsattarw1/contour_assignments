@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+}
+
+.main {
+    height: auto;
+    width: 700px;
+    background-color: white;
+    -moz-box-shadow: 0 0 5px 3px #9d9d9d;
+    -webkit-box-shadow: 0 0 3px 5px #9d9d9d;
+    box-shadow: 0 0 5px 3px #9d9d9d;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.city {
+    background-color: lightsalmon;
+    min-height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: cursive;
+}
+
+.city h4{
+    font-size: 38px;
+}
+
+.weather {
+    background-color: burlywood;
+    width: 100%;
+    height: auto;
+    color: white;
+    padding: 20px;
+}
+
+.weather .weather1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather .weather2 {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+#temp {
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+#desc {
+    font-size: 24px;
+}
