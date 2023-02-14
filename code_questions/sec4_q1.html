@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" id="click_btn" onclick="firstClick()">Get Data</button>
+    <div id="output"></div>
+    <script>
+        let count = 0;
+        let list = "";
+        async function firstClick() {
+            count++;
+            if (count == 1) {
+                let res = await fetch("https://learnwebcode.github.io/json-example/animals-1.json");
+                let data = await res.json();
+                list += data.map((item, index) => item?.name) + ", ";
+                document.getElementById('output').innerHTML = list;
+            }
+            else if (count == 2) {
+                let res = await fetch("https://learnwebcode.github.io/json-example/animals-2.json");
+                let data = await res.json();
+                list += data.map((item, index) => item?.name) + ", ";
+                document.getElementById('output').innerHTML = list;
+            }
+
+            else if (count == 3) {
+                let res = await fetch("https://learnwebcode.github.io/json-example/animals-3.json");
+                let data = await res.json();
+                list += data.map((item, index) => item?.name);
+                document.getElementById('output').innerHTML = list;
+                document.getElementById('click_btn').style.display = 'none';
+                count = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>

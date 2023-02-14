@@ -1,0 +1,397 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\colortbl ;\red0\green176\blue80;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\b\f0\fs32\lang9 Section I \f1\endash  MCQs  \par
+
+\pard\sa200\sl276\slmult1\b0\fs22 Encircle the correct answer out of the given options. Cutting or overwriting will result in \par
+no marks.          \par
+
+\pard\sa200\sl276\slmult1\qr  [Mark: 10] \par
+
+\pard\sa200\sl276\slmult1 1. The behavior of the instances present of a class inside a method is defined \par
+a) Method \par
+\cf1\b b) Class \cf0\b0\par
+c) Interfaces \par
+d) Classes and Interfaces \par
+ \par
+2. When a class B can extend another class A, we say that? \par
+\cf1\b a) A is the superclass and B is the subclass \cf0\b0\par
+b) B is the superclass and A is the subclass \par
+c) Both A and B are the superclass \par
+d) Both A and B are the subclass \par
+ \par
+3. How the objects are passed in JavaScript? \par
+a) By value \par
+\cf1\b b) By reference \cf0\b0\par
+c) Both by value and reference \par
+d) None of the above \par
+ \par
+4. Which keyword is used to inherit a class or abstract class? \par
+\cf1\b a) extends \cf0\b0\par
+b) extend \par
+c) implement \par
+d) inherit \par
+ \par
+5. Which feature of OOP encourages the code reusability? \par
+a) Polymorphism \par
+b) Encapsulation \par
+\cf1\b c) Inheritance \par
+\cf0\b0 d) Abstraction \par
+ \par
+6. What  among  the  following  is  an  appropriate  when  an  event  occurs  when  the  user \par
+clicks on an element? \par
+\cf1\b a) onclick \par
+\cf0\b0 b) onchange \par
+c) onkeyup \par
+d) onblur \par
+ \par
+7. Consider the below code and identify the correct code in order to fetch the value \par
+entered in username text field? \par
+< body> \par
+< form name="register"> \par
+          Enter username < input value="John" id="name" name="username"> \par
+< /form> \par
+< /body> \par
+a) document.register.name.value \par
+\cf1\b b) document.getElementById ("name").value \par
+\cf0\b0 c) document.getElementByName ("name").value \par
+d) None of the above \par
+ \par
+8. AJAX is about updating ______, without reloading the full-page. \par
+\cf1\b a) parts of a web page \par
+\cf0\b0 b) parts of a database records \par
+c) parts of a HTML tags dynamically \par
+d) parts of a CSS classes dynamically \par
+ \par
+9. What is the correct syntax to create an XMLHttpRequest object?  \par
+a) XMLHttpRequest() variable \par
+b) XMLHttpRequest() variable; \par
+c) variable = new XMLHttpRequest() \par
+\cf1\b d) variable = new XMLHttpRequest(); \cf0\b0\par
+ \par
+10. Which of the following code will throw an error? \par
+a) JSON.parse(\lquote\{\}\rquote ); \par
+b) JSON.parse(null); \par
+\cf1\b c) JSON.parse(undefined) \cf0\b0\par
+d) JSON.parse(\lquote []\rquote ) \par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b\fs32 Section \endash  II  \par
+
+\pard\sa200\sl276\slmult1\b0\fs22 1. Write a JavaScript program to display the reading status (i.e. display book name, author \par
+name and reading status) of the following books.                                  \par
+
+\pard\sa200\sl276\slmult1\qr [Marks: 15] \par
+
+\pard\sa200\sl276\slmult1\b\f0\lang1033 Ans:\f1\lang9  \b0\par
+// search status by title or author\par
+var library = [\par
+    \{\par
+        author: 'Bill Gates',\par
+        title: 'The Road Ahead',\par
+        readingStatus: true\par
+    \},\par
+    \{\par
+        author: 'Steve Jobs',\par
+        title: 'Walter Isaacson',\par
+        readingStatus: true\par
+    \},\par
+    \{\par
+        author: 'Suzanne Collins',\par
+        title: 'Mockingjay: The Final Book of The Hunger Games',\par
+        readingStatus: false\par
+    \}];\par
+\par
+function checkStatus(search) \{\par
+    const filtered = library.filter(item => (item?.author == search || item?.title == search));\par
+    console.log(`Reading status of book \\'$\{filtered[0]?.title\}\\' having author's name \\'$\{filtered[0]?.author\}\\' is $\{filtered[0]?.readingStatus\}`);\par
+\}\par
+\par
+checkStatus("Suzanne Collins")\par
+ \par
+ \par
+2. Create a program that creates 3 Employee objects from an Employee class with ID, \par
+Name, Department and Salary properties. Values of properties should be assigned \par
+through getter and setter methods (ES6). Display all the properties of all 3 \par
+employees.                                                \par
+
+\pard\sa200\sl276\slmult1\qr  [Marks: 15] \par
+
+\pard\sa200\sl276\slmult1  \b\f0\lang1033 Ans:\par
+class Employee \{\par
+    constructor(id, name, dept, sal) \{\par
+        this.setId(id);\par
+        this.setName(name);\par
+        this.setDept(dept);\par
+        this.setSal(sal);\par
+    \}\par
+\par
+    // setter functions\par
+\par
+    setId(id) \{\par
+        this.id = id;\par
+    \}\par
+\par
+    setName(n) \{\par
+        this.name = n;\par
+    \}\par
+\par
+    setDept(d) \{\par
+        this.dept = d;\par
+    \}\par
+\par
+    setSal(s) \{\par
+        this.sal = s;\par
+    \}\par
+\par
+    // getter functions\par
+\par
+    getId() \{\par
+        return this.id;\par
+    \}\par
+\par
+    getName() \{\par
+        return this.name;\par
+    \}\par
+\par
+    getDept() \{\par
+        return this.dept;\par
+    \}\par
+\par
+    getSal() \{\par
+        return this.sal;\par
+    \}\par
+\}\par
+\par
+let obj1 = new Employee(1, "Muhammad Asim", "Finance", "40000" );\par
+let obj2 = new Employee(2, "Sattar", "Software", "60000" );\par
+let obj3 = new Employee(3, "Wattoo", "IT", "70000" );\par
+console.log(obj1);\par
+console.log(obj2);\par
+console.log(obj3);\b0\f1\lang9\par
+3. At times, when we access a JavaScript object, we receive raw JSON string and we \par
+need to convert it to an object ourselves to use it in our program. Similarly, we also \par
+may require an object in JSON string form. Write a program that parses JSON \par
+string in \lquote member\rquote  array from following link to an object and display its contents. \par
+You are also required to stringify the last object in \lquote member\rquote  array.  \par
+{{\field{\*\fldinst{HYPERLINK https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json }}{\fldrslt{https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json\ul0\cf0}}}}\f1\fs22                  \par
+
+\pard\sa200\sl276\slmult1\qr  [Marks: 15]\par
+
+\pard\sa200\sl276\slmult1\b\f0\lang1033 Ans:\par
+\par
+fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json')\par
+    .then(res => res.json()) // the .json() method parses the JSON response into a JS object literal\par
+    .then(data => \{\par
+        let js_obj = data;\par
+        if (js_obj) \{\par
+            console.log("This is javascript objcet: ", js_obj);\par
+            let json_obj = JSON.stringify(js_obj);\par
+            if (json_obj) \{\par
+                console.log("This is json object: ", json_obj);\par
+            \}\par
+        \}\par
+    \});\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\fs32 Section \f1\endash  III  \par
+
+\pard\sa200\sl276\slmult1\fs22 1. Differentiate arrow functions and regular functions.      \par
+\f0 Ans:\f1\par
+\f0 1. Syntax:\par
+\b0 Arrow functions give a easy syntax as well as easy implementations in complex implementation.\par
+\b 2. Arguments Binding:\par
+\b0 Arrow functions do not have an arguments binding. However, they have access to the arguments object of the closest non-arrow parent function. But regular functions make use of arguments binding.\par
+\b 3. 'this' keyword:\par
+\b0 Unlike regular functions, arrow functions do not have their own this. The value of this inside an arrow function remains the same throughout the lifecycle of the function.\par
+4. '\b new' keyword:\par
+\b0 Since regular functions are constructible, they can be called using the new keyword.\par
+However, the arrow functions are only callable and not constructible, i.e arrow functions can never be used as constructor functions.\par
+\b 5. Duplicate parameter:\b0\par
+Unlinke regular functions, arrow functions can never have duplicate named parameters, whether in strict or non-strict mode.\par
+\b\f1\par
+
+\pard\sa200\sl276\slmult1\qr  [Marks: 2] \par
+
+\pard\sa200\sl276\slmult1  \par
+2. Write any three different ways to get an element from DOM?     \par
+
+\pard\sa200\sl276\slmult1\qr  [Marks: 3] \par
+
+\pard\sa200\sl276\slmult1\f0 Ans:\par
+\b0 1). document.getElementById('id_name');\par
+2). document.getElementByClassName('class_name');\par
+3). document.getElementByTagName('tag_name');\par
+=> \ul Note\ulnone :  querySelector can also be used as alternative\par
+\b\f1\par
+3. Write a program that takes a number of greater than 5 digits from input field and \par
+shows sum of all odd numbers. For example, if the input is 196783, the sum would \par
+be 1 + 9 + 7 + 3 = 20.                                                                                       \par
+
+\pard\sa200\sl276\slmult1\qr [Marks: 5] \par
+
+\pard\sa200\sl276\slmult1\f0 Ans:\par
+<!DOCTYPE html>\par
+<html lang="en">\par
+\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Document</title>\par
+</head>\par
+\par
+<body>\par
+    <input type="number" id="inp" placeholder="enter number..." />\par
+    <button onclick="sumOdd()">Add Odd Numbers</button>\par
+    <div id="out"></div>\cf1\par
+    <script>\par
+        function sumOdd() \{\par
+            let n = document.getElementById('inp').value;\par
+            let total = 0;\par
+            if (n.length > 5) \{\par
+                for (let i of n) \{\par
+                    if (parseInt(i) % 2 != 0) \{\par
+                        total += parseInt(i);\par
+                    \}\par
+                \}\par
+                document.getElementById('out').innerHTML = `sumof odd digits is: $\{total\}`;\par
+            \}\par
+            else \{\par
+                alert('Please enter digits greater than number of five')\par
+            \}\par
+        \}\par
+    </script>\par
+\cf0 </body>\par
+</html>\f1\par
+ \par
+4. Given an integer N, the task is to find the sum of interior angles of an N-sided \par
+polygon.               \par
+
+\pard\sa200\sl276\slmult1\qr  [Marks: 5] \par
+
+\pard\sa200\sl276\slmult1\f0 Ans:\par
+\par
+\cf1 let N = 15;\par
+function sumAngles(n) \{\par
+    let sum = 2 * n - 4;\par
+    console.log(sum);\par
+    return sum\par
+\}\par
+\cf0\par
+sumAngles(N)\f1\par
+ \par
+5. Create a age calculator that takes date of birth of user and shows age in years, \par
+months and days.                                                                                          \par
+
+\pard\sa200\sl276\slmult1\qr  [Marks: 5] \par
+
+\pard\sa200\sl276\slmult1\f0 Ans:\par
+<!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">\par
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">\par
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Age Calculator</title>\par
+</head>\par
+\par
+<body>\par
+    <div class="container">\par
+        <h1 class="text-center">Age Calculator</h1>\par
+        <hr />\par
+        <input type="date" placeholder="type your date of birth" id="dob" />\par
+        <button type="button" onclick="calculate()">Calculate Age</button>\par
+        <br />\par
+        <h3 id="output"></h3>\par
+    </div>\cf1\par
+\par
+    <script>\par
+        function calculate() \{\par
+            let inp = document.getElementById("dob").value;\par
+            var today = new Date();\par
+            var birthDate = new Date(inp);\par
+            var age = today.getFullYear() - birthDate.getFullYear();\par
+            var m = today.getMonth() - birthDate.getMonth();\par
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) \{\par
+                age--;\par
+            \}\par
+            document.getElementById('output').innerHTML = `Your current age is: $\{age\} year.`;\par
+        \}\par
+    </script>\par
+\cf0 </body>\par
+</html>\par
+\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\fs32 Section \f1\endash  IV  \par
+
+\pard\sa200\sl276\slmult1\fs22 1. Showcase your solid knowledge of JavaScript, DOM, JSON and AJAX by creating a \par
+simple webpage that displays information of pets from an API (URLs given below). \par
+The URL contain information of name of the pet, its\rquote  species and what are its food \par
+likes and dislikes. Your task is to write code for the fetching and showing the above \par
+information of the pets. One URL contains information of 3 pets. You should \par
+dynamically access all the URLs to show the information by clicking the given \par
+button. You will click the button exactly 3 times and upon each click information of \par
+3 pets will be shown on the page. Once all 3 click attempts are consumed, the button \par
+should disappear preventing the user to fetch data that does not exist and the page \par
+should show the final result in appended form.   \par
+JSON URLs:                                                                                                        \par
+
+\pard\sa200\sl276\slmult1\qr  [Marks: 25] \par
+
+\pard\sa200\sl276\slmult1 {{\field{\*\fldinst{HYPERLINK https://learnwebcode.github.io/json-example/animals-1.json }}{\fldrslt{https://learnwebcode.github.io/json-example/animals-1.json\ul0\cf0}}}}\f1\fs22  \par
+{{\field{\*\fldinst{HYPERLINK https://learnwebcode.github.io/json-example/animals-2.json }}{\fldrslt{https://learnwebcode.github.io/json-example/animals-2.json\ul0\cf0}}}}\f1\fs22  \par
+{{\field{\*\fldinst{HYPERLINK https://learnwebcode.github.io/json-example/animals-3.json }}{\fldrslt{https://learnwebcode.github.io/json-example/animals-3.json\ul0\cf0}}}}\f1\fs22  \par
+\f0\par
+Ans:\par
+\f1 <!DOCTYPE html>\par
+<html lang="en">\par
+\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Document</title>\par
+</head>\par
+\par
+<body>\par
+    <button type="button" id="click_btn" onclick="firstClick()">Get Data</button>\par
+    <div id="output"></div>\par
+\cf1     <script>\par
+        let count = 0;\par
+        let list = "";\par
+        async function firstClick() \{\par
+            count++;\par
+            if (count == 1) \{\par
+                let res = await fetch("https://learnwebcode.github.io/json-example/animals-1.json");\par
+                let data = await res.json();\par
+                list += data.map((item, index) => item?.name) + ", ";\par
+                document.getElementById('output').innerHTML = list;\par
+            \}\par
+            else if (count == 2) \{\par
+                let res = await fetch("https://learnwebcode.github.io/json-example/animals-2.json");\par
+                let data = await res.json();\par
+                list += data.map((item, index) => item?.name) + ", ";\par
+                document.getElementById('output').innerHTML = list;\par
+            \}\par
+\par
+            else if (count == 3) \{\par
+                let res = await fetch("https://learnwebcode.github.io/json-example/animals-3.json");\par
+                let data = await res.json();\par
+                list += data.map((item, index) => item?.name);\par
+                document.getElementById('output').innerHTML = list;\par
+                document.getElementById('click_btn').style.display = 'none';\par
+     \f0        \f1    count = 0;\par
+            \}\par
+        \}\par
+    </script>\par
+\cf0 </body>\par
+</html>\par
+ \par
+  \par
+\b0\f0\lang9\par
+}
+ 
